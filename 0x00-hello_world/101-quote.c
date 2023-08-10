@@ -5,7 +5,7 @@
  *
  * Description: Print within write function
  *
- * Return: 1
+ * Return: 1 (EXIT_FAILURE)
 */
 
 int main(void)
