@@ -12,18 +12,21 @@ int main(void)
 {
 
 	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
 
 	for (; a < 10; a++)
 	{
-		int b = 0;
+		b = 0;
 
 		for (; b < 10; b++)
 		{
-			int c = a;
+			c = a;
+			d = b + 1;
 
 			for (; c < 10; c++)
 			{
-				int d = b + 1;
 
 				for (; d < 10; d++)
 				{
@@ -39,9 +42,11 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
+				d = 0;
 			}
 		}
 	}
 
+	putchar('\n');
 	return (0);
 }
