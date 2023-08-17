@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	long n = 612852475143;
-	long i, largest_factor;
+	long int n = 612852475143;
+	long int i, largest_factor;
 	double square = sqrt(n);
 
-	for (i = 0; i < square; i++)
+	for (i = 0; i <= square; i++)
 	{
 		if (n % i == 0)
 			largest_factor = n / i;
