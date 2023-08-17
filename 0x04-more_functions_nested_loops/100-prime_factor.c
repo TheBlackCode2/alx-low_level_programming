@@ -10,13 +10,19 @@ int main(void)
 {
 	long int n = 612852475143;
 	long int i, largest_factor;
-	double square = sqrt(n);
 
-	for (i = 0; i <= square; i++)
+	while (n % 2 == 0)
+		n /= 2;
+
+	for (i = 3; i <= sqrt(n); i += 2)
 	{
-		if (n % i == 0)
-			largest_factor = n / i;
+		while (n % i == 0)
+			n /= i;
+		largest_factor = n;
 	}
+
+	if (n > 2)
+		largest_factor = n;
 
 	printf("%ld\n", largest_factor);
 
