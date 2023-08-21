@@ -29,5 +29,8 @@ int _atoi(char *s)
 		s++;
 	}
 
-	return (n * sign);
+	if (sign == -1)
+		n -= 2 * n;
+
+	return (n);
 }
