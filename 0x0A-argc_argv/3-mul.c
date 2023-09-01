@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 	/* Declaration of variables */
 	int n1, n2;
 	int result;
-	int i;
 
 	/* Chek for input arguments size */
 	if (argc != 3)
