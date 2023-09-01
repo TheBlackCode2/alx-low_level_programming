@@ -4,12 +4,11 @@
  * main - Entry point
  * @argc: size of commands
  * @argv: commands list
- * Return: Always 0, but is argc != 3 return 1
+ * Return: Always 0
 */
 
 int main(int argc, char *argv[])
 {
-
 	/* Declaration of variables */
 	int n[2]  = {0, 0};
 	int result;
