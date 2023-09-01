@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -10,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	/* Declaration of variables */
-	int n[2]  = {0, 0};
+	int n1, n2;
 	int result;
 	int i;
 
@@ -21,35 +22,10 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	/* Check for number digits and convert string to int */
-	for (i = 1; i < argc; i++)
-	{
-		int sign = 1;
-		int j;
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[2]);
 
-		for (j = 0; argv[i][j] != '\0'; j++)
-		{
-			if (argv[i][j] >= '0' && argv[i][j] <= '9')
-			{
-				n[i - 1] *= 10;
-				n[i - 1] += argv[i][j] - '0';
-			}
-			else if (argv[i][j] == '-')
-			{
-				sign *= -1;
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-
-		n[i - 1] *= sign;
-	}
-
-	/* Calc multiplication and display the result */
-	result = n[0] * n[1];
+	result = n1 * n2;
 	printf("%d\n", result);
 
 	return (0);
