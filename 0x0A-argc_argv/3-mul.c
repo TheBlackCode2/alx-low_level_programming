@@ -48,7 +48,6 @@ int main(int argc, char *argv[])
 
 		n[i - 1] *= sign;
 	}
-    
 
 	/* Calc multiplication and display the result */
 	result = n[0] * n[1];
