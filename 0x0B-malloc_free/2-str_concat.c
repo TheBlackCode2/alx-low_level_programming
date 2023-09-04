@@ -30,11 +30,13 @@ char *str_concat(char *s1, char *s2)
 	char *b;
 	int i;
 
-	if (s1 ==  NULL || s2 == NULL)
+	if (s1 ==  NULL && s2 == NULL)
 		return ("");
 
-	s1_len = getLength(s1);
-	s2_len = getLength(s2);
+	if (s1 != NULL)
+		s1_len = getLength(s1);
+	if (s2 != NULL)
+		s2_len = getLength(s2);
 
 	b = (char *) malloc((s1_len + s2_len + 1) * sizeof(char));
 
