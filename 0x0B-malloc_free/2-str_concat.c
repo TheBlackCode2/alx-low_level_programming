@@ -26,7 +26,7 @@ int getLength(char *str)
 
 char *str_concat(char *s1, char *s2)
 {
-	int s1_len = 0, s2_len = 0;
+	int s1_len = 0, s2_len = 0, len = 0;
 	char *b;
 	int i;
 
@@ -38,7 +38,9 @@ char *str_concat(char *s1, char *s2)
 	if (s2 != NULL)
 		s2_len = getLength(s2);
 
-	b = (char *) malloc((s1_len + s2_len + 1) * sizeof(char));
+	len = s1_len + s2_len;
+
+	b = (char *) malloc((len + 1) * sizeof(char));
 
 	if (b == NULL)
 		return (NULL);
@@ -46,10 +48,10 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < s1_len; i++)
 		b[i] = s1[i];
 
-	for (i = 0; i < (s1_len + s2_len); i++)
+	for (i = 0; i < s2_len; i++)
 		b[s1_len + i] = s2[i];
 
-	b[i] = '\0';
+	b[len] = '\0';
 
 	return (b);
 
