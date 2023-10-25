@@ -8,11 +8,11 @@
 */
 int search_for_prime(int i, int n)
 {
-	if (i == n)
+	if (i == 1)
 		return (1);
-	if (n % i == 0 || i > n)
+	if (n % i == 0)
 		return (0);
-	return (search_for_prime(i + 1, n));
+	return (search_for_prime(i - 1, n));
 }
 
 /**
@@ -22,7 +22,7 @@ int search_for_prime(int i, int n)
 */
 int is_prime_number(int n)
 {
-	if (n <= 0)
+	if (n <= 1)
 		return (0);
-	return (search_for_prime(2, n));
+	return (search_for_prime(n / 2, n));
 }
