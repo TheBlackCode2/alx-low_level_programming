@@ -9,8 +9,7 @@
 */
 int main(int argc __attribute__((unused)), char **argv)
 {
-	int i;
-	int sum __attribute__((unused)) = 0;
+	int i, sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
