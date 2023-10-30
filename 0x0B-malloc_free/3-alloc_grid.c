@@ -27,7 +27,7 @@ int **alloc_grid(int width, int height)
 		for (w = 0; w < width; w++)
 			row[w] = 0;
 
-		grid[h] = row;	
+		grid[h] = row;
 	}
-	return grid;
+	return (grid);
 }
