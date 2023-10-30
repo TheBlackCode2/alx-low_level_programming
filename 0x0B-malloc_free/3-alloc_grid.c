@@ -35,6 +35,7 @@ int **alloc_grid(int width, int height)
 			else
 			{
 				free(grid);
+				return (NULL);
 			}
 
 			grid[h] = row;
