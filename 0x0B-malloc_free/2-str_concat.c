@@ -38,7 +38,7 @@ char *str_concat(char *s1, char *s2)
 		for (i = 0; i < length; i++)
 			if (i < size1)
 				buffer[i] = s1[i];
-			else 
+			else
 				buffer[i] = s2[i - size1];
 
 		buffer[length] = '\0';
