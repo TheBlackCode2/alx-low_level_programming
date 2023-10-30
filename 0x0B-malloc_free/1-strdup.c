@@ -38,9 +38,8 @@ char *_strdup(char *str)
 
 		for (i = 0; i < size; i++)
 			buffer[i] = str[i];
+
+		buffer[size] = '\0';
 	}
-
-	buffer[size] = '\0';
-
 	return (buffer);
 }
