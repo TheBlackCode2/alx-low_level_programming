@@ -30,7 +30,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	size = get_length(str);
-	buffer = (char *) malloc(sizeof(char) * size);
+	buffer = (char *) malloc(sizeof(char) * size + 1);
 
 	if (buffer)
 	{
@@ -39,6 +39,8 @@ char *_strdup(char *str)
 		for (i = 0; i < size; i++)
 			buffer[i] = str[i];
 	}
+
+	buffer[size] = '\0';
 
 	return (buffer);
 }
