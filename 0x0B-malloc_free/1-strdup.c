@@ -8,7 +8,7 @@
 */
 int get_length(char *str)
 {
-	if(*str == '\0')
+	if (*str == '\0')
 		return (0);
 	return (1 + get_length(++str));
 }
