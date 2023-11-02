@@ -4,7 +4,7 @@
 /**
  * _realloc - reallocates a memory block using
  *            malloc and free
- * @p: the input pointer to memory bloc
+ * @ptr: the input pointer to memory bloc
  * @old_size: the input of the old size of memory bloc
  * @new_size: the input of the new size of memory bloc
  * Return: a pointer to the memory adress if success,
