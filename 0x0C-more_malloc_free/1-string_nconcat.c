@@ -8,9 +8,9 @@
 */
 int get_length(char *str)
 {
-        if (str == NULL || *str == '\0')
-                return (0);
-        return (1 + get_length(++str));
+	if (str == NULL || *str == '\0')
+		return (0);
+	return (1 + get_length(++str));
 }
 
 /**
@@ -30,8 +30,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	l1 = get_length(s1);
 	l2 = get_length(s2);
 	n = ((n <= l2)? n : l2);
-	
+
 	c = (char*) malloc(sizeof(char) * (l1 + n + 1));
+
+	if (!c)
+		return (NULL);
 
 	for (i = 0; i < l1; i++)
 		c[i] = s1[i];
@@ -42,5 +45,4 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	c[l1 + n] = '\0';
 
 	return (c);
-
 }
