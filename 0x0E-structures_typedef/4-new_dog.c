@@ -36,7 +36,7 @@ char *strdup(char *str)
 		buffer[i] = str[i];
 
 	buffer[length] = '\0';
-        return (buffer);
+	return (buffer);
 }
 
 
