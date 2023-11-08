@@ -25,18 +25,18 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	op = argv[2];
 
-	if ((*op == '/' || *op == '%') && num2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-
 	f = get_op_func(op);
 
 	if (f == NULL)
 	{
 		printf("Error\n");
 		exit(99);
+	}
+
+	if ((*op == '/' || *op == '%') && num2 == 0)
+	{
+		printf("Error\n");
+		exit(100);
 	}
 
 	result = f(num1, num2);
