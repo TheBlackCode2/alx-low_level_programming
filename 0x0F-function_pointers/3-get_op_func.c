@@ -2,7 +2,7 @@
 #include "3-calc.h"
 
 /**
- * get_op_func -
+ * get_op_func - gets the function that it matchs the operator
  * @s: the input operator
  * Return: a pointer to the function that corresponds
  *         to the operator given as a parameter
