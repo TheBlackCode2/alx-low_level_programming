@@ -7,7 +7,7 @@
  * @h: pointer to node header
  * Return: length of a linked list
 */
-size_t list_len(const list_t *h);
+size_t list_len(const list_t *h)
 {
 	size_t i;
 
